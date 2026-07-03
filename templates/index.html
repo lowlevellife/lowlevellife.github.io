@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Lowlevellife blogs.</h1>
+<p class="tagline">
+    Software dev based in the UK. Intending to use this space to connect with
+    others interested in similar ideas, blog about projects I'm currently working on and research I
+    am currently looking into. Currently interested in the following things...
+</p>
+<ul>
+    <li>Machine Learning optimisations, inference frameworks and edgeML</li>
+    <li>AI security</li>
+    <li>Embedded systems</li>
+</ul>
+
+<h2>Posts</h2>
+<ul class="post-list">
+    {% for post in posts %}
+    <li>
+        <a href="{{ root }}posts/{{ post.slug }}/">{{ post.title }}</a>
+        <time datetime="{{ post.date.isoformat() }}">{{ post.date.strftime("%d %b %Y") }}</time>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
