@@ -3,6 +3,7 @@
 {% block title %}{{ post.title }} - Lowlevellife blogs{% endblock %}
 
 {% block content %}
+<p class="prompt">guest@lowlevellife:~$ cat {{ post.slug }}.md</p>
 <article>
     <header class="post-header">
         <h1>{{ post.title }}</h1>

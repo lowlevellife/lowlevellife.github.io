@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+<p class="prompt">guest@lowlevellife:~$ whoami</p>
 <h1>Lowlevellife blogs.</h1>
 <p class="tagline">
     Software dev based in the UK. Intending to use this space to connect with
@@ -13,6 +14,7 @@
     <li>Embedded systems</li>
 </ul>
 
+<p class="prompt">guest@lowlevellife:~$ ls posts/</p>
 <h2>Posts</h2>
 <ul class="post-list">
     {% for post in posts %}
